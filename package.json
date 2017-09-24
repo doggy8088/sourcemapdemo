@@ -1,0 +1,25 @@
+{
+  "name": "sourcemapdemo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "minify": "uglifyjs -o main.min.js main.js",
+    "minify_sourcemap_default": "uglifyjs --source-map -o main.min.js main.js",
+    "minify_sourcemap_inline":  "uglifyjs --source-map \"url='inline'\" -o main.min.js main.js",
+    "minify_sourcemap_url":     "uglifyjs --source-map \"url='main.min.js.map'\" -o main.min.js main.js",
+
+    "minify_mangle":   "uglifyjs --mangle -o main.min.js main.js",
+    "minify_compress": "uglifyjs --compress -o main.min.js main.js",
+    "minify_extreme":  "uglifyjs --compress --mangle -o main.min.js main.js",
+    
+    "clean": "git clean -f -x -d"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "jquery": "^3.2.1",
+    "uglify-js": "^3.1.2"
+  }
+}
